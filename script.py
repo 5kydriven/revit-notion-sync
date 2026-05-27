@@ -471,17 +471,17 @@ def extract_schedules():
 
 
 def infer_column_property_type(schedule_data, column_name):
-    values = []
-    for row in schedule_data["rows"]:
-        for cell in row["cells"]:
-            if cell["column_name"] == column_name and clean_text(cell["text"]):
-                values.append(cell["text"])
-    if not values:
-        return "rich_text"
-    for value in values:
-        if parse_number(value) is None:
-            return "rich_text"
-    return "number"
+    # values = []
+    # for row in schedule_data["rows"]:
+    #     for cell in row["cells"]:
+    #         if cell["column_name"] == column_name and clean_text(cell["text"]):
+    #             values.append(cell["text"])
+    # if not values:
+    return "rich_text"
+    # for value in values:
+    #     if parse_number(value) is None:
+    #         return "rich_text"
+    # return "number"
 
 
 def schedule_schema_properties(schedule_data):
